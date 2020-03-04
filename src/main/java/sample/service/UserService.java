@@ -15,8 +15,8 @@ public class UserService implements UserInt {
     Logger logger = Logger.getLogger(this.getClass().getName());
 
     @Override
-    public void create() {
-
+    public void create(User user) {
+        System.out.println("A ajuns in metoda pentru introducere in DB");
     }
 
     @Override
@@ -27,8 +27,6 @@ public class UserService implements UserInt {
             String hql = "from User";
             Query<User> query = session.createQuery(hql, User.class);
             users = query.getResultList();
-
-            //logger.info(users.toString());
         } catch (HibernateException e) {
             System.out.println(e.getMessage());
         }

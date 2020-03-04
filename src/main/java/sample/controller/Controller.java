@@ -13,7 +13,6 @@ import javafx.stage.Stage;
 import sample.model.User;
 import sample.service.UserService;
 import sample.service.utils.FilePathUtil;
-import sample.service.utils.HibernateUtil;
 
 import java.io.IOException;
 import java.util.List;
@@ -46,6 +45,7 @@ public class Controller {
         }
     }
 
+    //changeScene after login
     public void changeScene(ActionEvent event) {
         try {
             Parent tableViewParent = FXMLLoader.load(getClass().getResource(FilePathUtil.getFilePathHomeScene()));

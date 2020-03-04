@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface UserInt {
     //CRUD
-    void create();
+    void create(User user);
 
     List<User> getAll();
 

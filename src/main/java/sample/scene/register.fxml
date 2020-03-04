@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.RegisterController">
    <top>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
@@ -40,7 +39,7 @@
                   <Insets left="200.0" top="10.0" />
                </VBox.margin>
             </Label>
-            <TextField>
+            <TextField fx:id="firstName">
                <VBox.margin>
                   <Insets left="200.0" right="200.0" />
                </VBox.margin>
@@ -50,7 +49,7 @@
                   <Insets left="200.0" />
                </VBox.margin>
             </Label>
-            <TextField layoutX="60.0" layoutY="46.0">
+            <TextField fx:id="lastName" layoutX="60.0" layoutY="46.0">
                <VBox.margin>
                   <Insets left="200.0" right="200.0" />
                </VBox.margin>
@@ -60,7 +59,7 @@
                   <Insets left="200.0" />
                </VBox.margin>
             </Label>
-            <TextField layoutX="60.0" layoutY="122.0">
+            <TextField fx:id="email" layoutX="60.0" layoutY="122.0">
                <VBox.margin>
                   <Insets left="200.0" right="200.0" />
                </VBox.margin>
@@ -70,7 +69,7 @@
                   <Insets left="200.0" />
                </VBox.margin>
             </Label>
-            <TextField layoutX="10.0" layoutY="148.0">
+            <TextField fx:id="username" layoutX="10.0" layoutY="148.0">
                <VBox.margin>
                   <Insets left="200.0" right="200.0" />
                </VBox.margin>
@@ -80,17 +79,7 @@
                   <Insets left="200.0" />
                </VBox.margin>
             </Label>
-            <PasswordField>
-               <VBox.margin>
-                  <Insets left="200.0" right="200.0" />
-               </VBox.margin>
-            </PasswordField>
-            <Label layoutX="10.0" layoutY="106.0" text="Repeat Password">
-               <VBox.margin>
-                  <Insets left="200.0" />
-               </VBox.margin>
-            </Label>
-            <PasswordField layoutX="10.0" layoutY="199.0">
+            <PasswordField fx:id="password">
                <VBox.margin>
                   <Insets left="200.0" right="200.0" />
                </VBox.margin>
@@ -98,11 +87,11 @@
          </children>
       </VBox>
    </top>
-   <bottom>
+   <center>
       <Button mnemonicParsing="false" onAction="#test" text="Create account" BorderPane.alignment="CENTER">
          <BorderPane.margin>
-            <Insets bottom="60.0" />
+            <Insets bottom="90.0" />
          </BorderPane.margin>
       </Button>
-   </bottom>
+   </center>
 </BorderPane>

@@ -14,7 +14,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        URL urlSampleScene = new File(FilePathUtil.getFilePathSampleScene()).toURI().toURL();
+        URL urlSampleScene = new File(FilePathUtil.getFilePathRegisterScene()).toURI().toURL();
         Parent root = FXMLLoader.load(urlSampleScene);
         primaryStage.setTitle("Java FX");
         primaryStage.setScene(new Scene(root, 600, 600));
@@ -24,7 +24,6 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
-
     }
 
 

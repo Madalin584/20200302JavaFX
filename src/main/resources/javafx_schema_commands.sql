@@ -14,3 +14,7 @@ insert into user(first_name, last_name, email, username, password) values('Popes
 insert into user(first_name, last_name, email, username, password) values('Popa','Ana','ana@yahoo.com','ana','ana');
 
 select * from user;
+
+alter table user modify username varchar(255) unique;
+
+describe user;
