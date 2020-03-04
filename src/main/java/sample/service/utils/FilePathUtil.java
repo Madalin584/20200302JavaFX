@@ -1,5 +1,6 @@
 package sample.service.utils;
-
+//nu este folosita clasa
+//a fost inlocuita cu un enum
 public class FilePathUtil {
     private static final String sampleFXMLPath = "D:\\\\SDA\\\\20200302JavaFX\\\\src\\\\main\\\\java\\\\sample\\\\scene\\\\sample.fxml";
     private static final String registerFXMLPath = "D:\\SDA\\20200302JavaFX\\src\\main\\java\\sample\\scene\\register.fxml";
