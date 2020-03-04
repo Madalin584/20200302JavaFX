@@ -59,9 +59,10 @@
                   <Insets left="278.0" top="30.0" />
                </VBox.margin>
             </Button>
-            <Button mnemonicParsing="false" text="Exit">
+            <Button mnemonicParsing="false" text="Next Scene" />
+            <Button fx:id="closeButton" mnemonicParsing="false" onAction="#closeButtonAction" text="Close">
                <VBox.margin>
-                  <Insets left="283.0" top="20.0" />
+                  <Insets left="279.0" top="20.0" />
                </VBox.margin>
             </Button>
          </children>

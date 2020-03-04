@@ -5,42 +5,27 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.hibernate.HibernateException;
-import org.hibernate.Session;
-import org.hibernate.query.Query;
-import sample.model.User;
-import sample.service.HibernateUtil;
+import sample.service.utils.FilePathUtil;
 
-import java.util.List;
+import java.io.File;
+import java.net.URL;
 
-public class Main /*extends Application */ {
+public class Main extends Application {
 
-//    @Override
-//    public void start(Stage primaryStage) throws Exception{
-//        Parent root = FXMLLoader.load(getClass().getResource("scene/sample.fxml"));
-//        primaryStage.setTitle("Login");
-//        primaryStage.setScene(new Scene(root, 600, 500));
-//        primaryStage.show();
-//    }
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        URL urlSampleScene = new File(FilePathUtil.getFilePathSampleScene()).toURI().toURL();
+        Parent root = FXMLLoader.load(urlSampleScene);
+        primaryStage.setTitle("Java FX");
+        primaryStage.setScene(new Scene(root, 600, 600));
+        primaryStage.show();
+    }
 
 
     public static void main(String[] args) {
-        //launch(args);
-        System.out.println("test");
-        getPeople(1);
+        launch(args);
+
     }
 
-    public static void getPeople(int id) {
-        try {
-            Session session = HibernateUtil.getSession();
-            String hql = "from User";
-            //User user = session.find(User.class, 1);
-            Query query = session.createQuery(hql, User.class);
-            List resultSet = query.getResultList();
 
-            System.out.println(resultSet.toString());
-        } catch (HibernateException e) {
-            System.out.println(e.getMessage());
-        }
-    }
 }
